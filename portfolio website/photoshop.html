@@ -70,6 +70,10 @@
             .modal {
                 height: 84vh;
                 width: 73%;
+                transition-duration: 0.5s;
+                transition-property: all;
+                display: block;
+                opacity: 0;
             }
             .modal p {
                 margin: 3%;
@@ -347,17 +351,18 @@
                     count++;
                     changeWork();
                 };
+                //functions for modals
                 function toggleText() {
                     let currentModal = modal[count];
                     if (toggleCount == 0) {
-                        currentModal.style.display = "block";
+                        currentModal.style.opacity = "1";
                         toggleCount = 1;
                     } else {
                         closeModal();
                     }
                 };
                 function closeModal() {
-                    modal[count].style.display = "none";
+                    modal[count].style.opacity = "0";
                     toggleCount = 0;
                 }
                 function changeWork() {
