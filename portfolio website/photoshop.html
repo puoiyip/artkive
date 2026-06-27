@@ -2,104 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="home.css"/>
-        <style>
-            div img {
-                height: 70vh;
-                object-fit: scale-down;
-                background-color: #efede6;
-                max-height:fit-content;
-                width: auto;
-            }
-            #photoshop-bg {
-                width: 75%;
-                background-color: #D4D2A5;
-                align-content: center;
-                justify-items: center;
-                flex: 6;
-                height: 100%;
-            }
-            #photoshop-interface {
-                flex-direction: row; 
-                display: flex;
-                border-style: solid;
-                border-width: 0em;
-                border-left-width: 4vw;
-                border-color: #efede6;
-                width: 96vw;
-                height: 84vh;
-            }
-            #photoshop-header {
-                text-align: left; 
-                margin: 0%;
-                background-color: #efede6;
-                width: max-content;
-                padding: 1%;
-                font-size: 150%;
-                top: 0;
-                position: sticky;
-                height: auto;
-            }
-            #photoshop-sidebar {
-                flex:2; 
-                background-color: #efede6;
-                flex-direction: column;
-                align-items: baseline;
-            }
-            #photoshop-sidebar div {
-                margin-left: 5%;
-                margin-right: 5%;
-                padding: 5%;
-                border-style: solid;
-                border-width: 0em;
-                border-bottom-width: 0.1em;
-                border-color:#7f8d5d;
-                position: sticky;
-                display: flex;
-            }
-            #photoshop-sidebar button {
-                margin: 5%;
-            }
-            ul {
-                padding: 1em;
-                background-color: #efede6;
-                border-style: solid;
-                border-width: 0;
-                border-bottom-width: 0.1em;
-                border-color: #7f8d5d;
-            }
-            .modal {
-                height: 84vh;
-                width: 73%;
-                transition-duration: 0.5s;
-                transition-property: all;
-                display: block;
-                opacity: 0;
-            }
-            .modal p {
-                margin: 3%;
-                overflow: auto;
-                color: white;
-                font-size: 110%;
-            }
-            .row {
-                position: relative;
-            }
-            .sidebar-button:hover {
-                cursor: pointer;
-            }
-            #square {
-                width: auto;
-                height: 40%;
-                background-color: #D4D2A5;
-            }
-            h2 {
-                font-family: 'Limelight';
-                font-size: 200%;
-                color: #143109;
-                margin-bottom: 0%;
-                margin-top: 2%;
-            }
-        </style>
+        <link rel="stylesheet" href="adobe.css"/>
         <!--Faculty Glyphic
         Elms Sans
         Limelight
@@ -122,7 +25,7 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="photoshop.html">Photoshop</a>
+                        <a href="photoshop.html">adobe</a>
                     </li>
                 </ul>
                 <ul>
@@ -137,12 +40,12 @@
                 </ul>
             </nav>
             <div style="width: 100%; text-align: left;">
-                <h2 id="photoshop-header">Adobe-Photoshop.psd</h2>
+                <h2 class="adobe-header">Adobe-Photoshop.psd</h2>
             </div>
             <!--styles the work and the side navigation-->
-            <div id="photoshop-interface">
+            <div class="adobe-interface">
                 <!--COLOR POP-->
-                <div id="photoshop-bg">
+                <div class="adobe-bg">
                     <div class="row">
                         <img src="portfolio images/colorpop.png">
                         <div class="modal">
@@ -303,8 +206,8 @@
                     </div>
                 </div>
                 <!--SIDE BAR/NAVIGATION-->
-                <div id="photoshop-sidebar">
-                    <div id="square">
+                <div class="adobe-sidebar">
+                    <div class="square">
 
                     </div>
                     <div>
@@ -326,68 +229,7 @@
                     <button onclick="nextWork()">Next</button>
                 </div>
             </div>
-            <script>
-                var works = document.getElementsByClassName("row");
-                var modal = document.getElementsByClassName("modal");
-                let count = 0;
-                let toggleCount = 0;
-                //set modal equal to width of editor interface
-                for (let i = 0; i < modal.length; i++) {
-                    modal[i].style.width = document.getElementById("photoshop-bg").style.width;
-                    modal[i].style.height = document.getElementById("photoshop-bg").style.height;
-                    console.log(i);
-                };
-                //functions
-                //used for the home page... need to make this an external file
-                function setCount(number) {
-                    count = number;
-                    changeWork();
-                }
-                function previousWork() {
-                    count--;
-                    changeWork();
-                };
-                function nextWork() {
-                    count++;
-                    changeWork();
-                };
-                //functions for modals
-                function toggleText() {
-                    let currentModal = modal[count];
-                    if (toggleCount == 0) {
-                        currentModal.style.opacity = "1";
-                        toggleCount = 1;
-                    } else {
-                        closeModal();
-                    }
-                };
-                function closeModal() {
-                    modal[count].style.opacity = "0";
-                    toggleCount = 0;
-                }
-                function changeWork() {
-                    checkCount();
-                    //makes the current work visible
-                    let art = works[count];
-                    art.style.display = "flex";
-                    //set display to "none" for everything else
-                    for (let i = 0; i < works.length; i++) {
-                        if (i != count) {
-                            let current = works[i];
-                            current.style.display = "none";
-                            console.log("display: none");
-                        };
-                    };
-                    closeModal();
-                };
-                function checkCount() {
-                    if (count > works.length - 1) {
-                        count = 0;
-                    } else if (count < 0) {
-                        count = works.length - 1;
-                    }
-                };
-            </script>
+            <script src="adobe.js"></script>
         </body>
     </head>
 </html>
