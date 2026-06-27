@@ -1,3 +1,5 @@
+
+/*sectioning tags*/
 div img {
     height: 70vh;
     object-fit: scale-down;
@@ -34,6 +36,23 @@ div img {
     position: sticky;
     height: auto;
 }
+ul {
+    padding: 1em;
+    background-color: #efede6;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 0.1em;
+    border-color: #7f8d5d;
+}
+.row {
+    position: relative;
+}
+body {
+    width: 100%; 
+    height: 100%; 
+    background-color: #efede6;
+}
+/*sidebar classes*/
 .adobe-sidebar {
     flex:2; 
     background-color: #efede6;
@@ -54,14 +73,15 @@ div img {
 .adobe-sidebar button {
     margin: 5%;
 }
-ul {
-    padding: 1em;
-    background-color: #efede6;
-    border-style: solid;
-    border-width: 0;
-    border-bottom-width: 0.1em;
-    border-color: #7f8d5d;
+.sidebar-button:hover {
+    cursor: pointer;
 }
+.square {
+    width: auto;
+    height: 55%;
+}
+
+/*modal classes*/
 .modal {
     height: 84vh;
     width: 73%;
@@ -76,17 +96,7 @@ ul {
     color: white;
     font-size: 110%;
 }
-.row {
-    position: relative;
-}
-.sidebar-button:hover {
-    cursor: pointer;
-}
-.square {
-    width: auto;
-    height: 40%;
-    background-color: #D4D2A5;
-}
+/*text*/
 h2 {
     font-family: 'Limelight';
     font-size: 200%;
