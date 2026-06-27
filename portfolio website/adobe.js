@@ -4,8 +4,8 @@ let count = 0;
 let toggleCount = 0;
 //set modal equal to width of editor interface
 for (let i = 0; i < modal.length; i++) {
-    modal[i].style.width = document.getElementsByClassName("adobe-bg").style.width;
-    modal[i].style.height = document.getElementsByClassName("adobe-bg").style.height;
+    modal[i].style.width = document.getElementsByClassName("adobe-bg")[0].style.width;
+    modal[i].style.height = document.getElementsByClassName("adobe-bg")[0].style.height;
     console.log(i);
 };
 //functions
