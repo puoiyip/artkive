@@ -104,5 +104,16 @@ button {
 button:hover {
     cursor: pointer;
 }
-/*home page specific*/
-
+/*animation*/
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
