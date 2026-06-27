@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="home.css"/>
+        <style>
+            .row {
+                width: 100%;
+            }
+            .row img {
+                display: flex;
+                width: 20vw;
+                height: 20vw;
+                object-fit: cover;
+                border-radius: 5em;
+                transition: 0.3s
+            }
+            .row img:hover {
+                opacity: 60%;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            #overview {
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-self: center;
+                background-color: #D0D6B3;
+                border-radius: 5em;
+                margin-top: 3%;
+            }
+            h2 {
+                border-style: solid;
+                padding: 0.5em;
+                border-width: 0em;
+                border-top-width: 0.05em;
+                border-bottom-width: 0.05em;
+                margin-top: 3%;
+                width: 90%;
+                text-align: center;
+                border-color: #AAAE7F;
+            }
+            button {
+                border-radius: 1em;
+                font-size: 150%;
+                font-weight: bold;
+                color: #45363B;
+                font-family: "Limelight";
+            }
+            #intro {
+                background-color: #e6dbb8;
+                padding: 2em;
+                border-radius: 2em;
+            }
+        </style>
+        <!--Faculty Glyphic
+        Elms Sans
+        Limelight
+        Kaushan Script-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Faculty+Glyphic&family=Kaushan+Script&family=Limelight&display=swap" rel="stylesheet">
+
+        <body onload="changeIcons()">
+            
+            <h2>welcome to</h2>
+            <h1>kelsey's artkive!</h1>
+
+            <p id="intro">
+                Hello! My name is Kelsey. Welcome to my portfolio! <br> 
+                17 | her/she | eng
+            </p>
+            <div style="display: flex; align-items: center; width: 75%">
+                <button id="left-button" onclick="leftButtonClick()"><</button>
+                <a href="" style="text-align: center" id="left-link">
+                    <h3></h3>
+                    <img src="" class="circle" id="left-icon">
+                </a>
+                <a href="" style="text-align: center;" id="current-link">
+                    <h3></h3>
+                    <img src="" class="circle" id="current-icon">
+                </a>
+                <a href="" style="text-align: center" id="right-link">
+                    <h3></h3>
+                    <img src="" class="circle" id="right-icon">
+                </a>
+                <button id="right-button" onclick="rightButtonClick()">></button>
+            </div>
+            <h2>
+                overview
+            </h2>
+            <div id="overview">
+                <div class="row">
+                    <img src="portfolio images/colorpop.png">
+                    <img src="portfolio images/doodlebomb.png">
+                    <img src="portfolio images/fake_media.png">
+                    <img src="portfolio images/fantastical_beast.png">
+                </div>
+                <div class="row">
+                    <img src="portfolio images/filtered_money1.png">
+                    <img src="portfolio images/filtered_money2.png">
+                    <img src="portfolio images/great_gatsby_cover.png">
+                    <img src="portfolio images/laufey_self_portrait.png">
+                </div>
+                <div class="row">
+                    <img src="portfolio images/logo.png">
+                    <img src="portfolio images/pixel_project.png">
+                    <img src="portfolio images/product_design.png">
+                    <img src="portfolio images/promotional_poster.png">
+                </div>
+                <div class="row">
+                    <img src="portfolio images/RECOVER_animation.gif">
+                    <img src="portfolio images/talking_animation.gif">
+                    <img src="portfolio images/chongyun_mountain.PNG">
+                    <img src="portfolio images/chongyun_train.JPEG">
+                </div>
+                <div class="row">
+                    <img src="portfolio images/kazuha.jpeg">
+                    <img src="portfolio images/kenma_kozume.png">
+                    <img src="portfolio images/mysta-900k.jpg">
+                    <img src="portfolio images/till.PNG">
+                </div>
+                <div class="row">
+                    <img src="portfolio images/tomo.jpeg">
+                    <img src="portfolio images/ver_vermillion.JPG">
+                    <img src="portfolio images/xingyun_lny.PNG">
+                    <img src="portfolio images/xingyun_tbhk.PNG">
+                </div>
+            </div>
+            <script>
+                //icon images
+                let leftIcon = document.getElementById("left-icon");
+                let currentIcon = document.getElementById("current-icon");
+                let rightIcon = document.getElementById("right-icon");  
+                //icon links
+                let leftLink = document.getElementById("left-link");
+                let currentLink = document.getElementById("current-link");
+                let rightLink = document.getElementById("right-link");
+                //page names
+                let leftName = document.getElementsByTagName("h3")[0];
+                let currentName = document.getElementsByTagName("h3")[1];
+                let rightName = document.getElementsByTagName("h3")[2];
+                //buttons
+                var leftButton = document.getElementById("left-button");
+                var rightButton = document.getElementById("right-button");
+                //count
+                let count = 0;
+                //[page name, image]
+                var icons = [
+                    "portfolio images/doodlebomb.png",
+                    "portfolio images/colorpop.png",
+                    "portfolio images/fake_media.png",
+                    "portfolio images/fantastical_beast.png"
+                ];
+                var htmlLinks = [
+                    "ibispaint.html",
+                    "photoshop.html",
+                    "illustrator.html",
+                    "videos.html"
+                ];
+                var pageNames = [
+                    "ibisPaint X",
+                    "Photoshop",
+                    "Illustrator",
+                    "Videos"
+                ];
+                function leftButtonClick() {
+                    count--;
+                    changeIcons();
+                };
+                function rightButtonClick() {
+                    count++;
+                    changeIcons();
+                };
+                function changeIcons() {
+                    if (count >= icons.length) {
+                        count = 0;
+                    } else if (count < 0) {
+                        count = icons.length - 1;
+                    }
+                    console.log("count: " + count);
+                    console.log("length: " + icons.length);
+                    //rotate the icon images
+                    currentIcon.src = icons[checkCount(count)];
+                    leftIcon.src = icons[checkCount(count - 1)];
+                    rightIcon.src = icons[checkCount(count + 1)];
+                    //rotate the links 
+                    currentLink.href = htmlLinks[checkCount(count)];
+                    leftLink.href = htmlLinks[checkCount(count - 1)];
+                    rightLink.href = htmlLinks[checkCount(count + 1)];
+                    //rotate the text
+                    currentName.innerHTML = pageNames[checkCount(count)];
+                    leftName.innerHTML = pageNames[checkCount(count - 1)];
+                    rightName.innerHTML = pageNames[checkCount(count + 1)];
+                };
+                function checkCount(value) {
+                    //greatest index that doesnt cause an index out of bounds error
+                    var maxIndex = icons.length - 1;
+                    //if the value is negative, set it to the max
+                    if (value < 0) {
+                        console.log(maxIndex);
+                        return maxIndex;
+                    //if the value is greater than the max, set it to 0
+                    } else if (value > maxIndex) {
+                        console.log(0)
+                        return 0;
+                    };
+                    console.log(value);
+                    return value;
+                };
+            </script>
+        </body>
+    </head>
+</html>

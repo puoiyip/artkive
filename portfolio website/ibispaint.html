@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="home.css"/>
+        <style>
+            #book-pages {
+                width: 70vw;
+                height: 80vh;
+                background-color: transparent;
+                perspective: 1000px;
+                position: relative;
+                transform-origin: top;
+            }
+            #book-pages-top, #book-pages-hidden, #book-pages-bottom {
+                width: 100%;
+                height: 100%;
+                transition: transform 1s;
+                transform-style: preserve-3d;
+                transform-origin: top;
+                background-color: #D0D6B3;
+                backface-visibility: hidden;
+                justify-items: center;
+                align-content: center;
+                position: absolute;
+                z-index: 2;
+            }
+            #book-pages-hidden {
+                transition: none;
+                transform: rotateX(180deg);
+                z-index: 1;
+            }
+            #book-pages-bottom {
+                z-index: 0;
+            }
+            #book-pages-top img, #book-pages-bottom img, #book-pages-hidden img {
+                height: 70vh;
+                width: auto;
+                object-fit: contain;
+                display: flex;
+                margin: 0;
+            }
+
+        </style>
+        <!--Faculty Glyphic
+        Elms Sans
+        Limelight
+        Kaushan Script-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Faculty+Glyphic&family=Kaushan+Script&family=Limelight&display=swap" rel="stylesheet">
+
+        <body>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="ibispaint.html">ibisPaint X</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="photoshop.html">Photoshop</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="illustrator.html">Illustrator</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="video.html">Videos</a>
+                    </li>
+                </ul>
+            </nav>
+            <h2>ibisPaintX</h2>
+            <div id="book-pages">
+                <div id="book-pages-top">
+                    <img src="portfolio images/chongyun_mountain.PNG" id="top-image">
+                </div>
+                <div id="book-pages-hidden">
+                    <img src="" id="hidden-image">
+                </div>
+                <div id="book-pages-bottom">
+                    <img src="" id="bottom-image">
+                </div>
+            </div>
+            <button onclick="previousArt()">Previous</button>
+            <button onclick="nextArt()">Next</button>
+            <script>
+                var artworks = [
+                    "portfolio images/chongyun_mountain.PNG",
+                    "portfolio images/chongyun_train.JPEG",
+                    "portfolio images/kazuha.jpeg",
+                    "portfolio images/kenma_kozume.png",
+                    "portfolio images/mysta_900k.jpg",
+                    "portfolio images/till.PNG",
+                    "portfolio images/tomo.jpeg",
+                    "portfolio images/ver_vermillion.JPG",
+                    "portfolio images/xingyun_lny.PNG",
+                    "portfolio images/xingyun_tbhk.PNG"
+                ];
+                var topDiv1 = document.getElementById("book-pages-top");
+                var topDiv2 = document.getElementById("book-pages-hidden");
+                var topImage1 = document.getElementById("top-image");
+                var topImage2 = document.getElementById("hidden-image");
+                var bottomImage = document.getElementById("bottom-image");
+                var maxIndex = artworks.length - 1;
+                let count = 0;
+                let degreeCount1 = 0;
+                let degreeCount2 = 180;
+
+                //flips the top layer
+                function nextArt() {
+                    /*degrees that are a multiple of 360 indicate that the page is "upright
+                    otherwise, it would be upside-down
+                    
+                    flips the upside-down layer clockwise*/
+                    if (degreeCount1 % 360 == 0 || degreeCount1 == 0) {
+                        topDiv1.style.transformStyle = "preserve-3d";
+                        topDiv1.style.transition = "transform 1s";
+                        topDiv1.style.zIndex = "2";
+
+                        topDiv2.style.transformStyle = "flat";
+                        topDiv2.style.transition = "0s";
+                        topDiv2.style.zIndex = "1";
+                    } else if (degreeCount2 % 360 == 0 || degreeCount2 == 0) {
+                        topDiv1.style.transformStyle = "flat";
+                        topDiv1.style.transition = "0s";
+                        topDiv1.style.zIndex = "1";
+
+                        topDiv2.style.transformStyle = "preserve-3d";
+                        topDiv2.style.transition = "transform 1s";
+                        topDiv2.style.zIndex = "2";
+                    }
+                    //increases the degrees by 180 to trigger animation
+                    incrementDegrees();
+                    topDiv1.style.transform = "rotateX(" + degreeCount1 + "deg)";
+                    topDiv2.style.transform = "rotateX(" + degreeCount2 + "deg)";
+                    //increments count by 1 and checks for out-of-bounds errors
+                    count++;
+                    checkReset();
+                    /*the upside-down layer is hidden (due to the backface-visibility property.
+                    changes the image of the hidden layer*/
+                    if (topDiv1.style.transformStyle == "flat") {
+                        topImage1.src = artworks[checkValue(count)];
+                    } else if (topDiv2.style.transformStyle == "flat") {
+                        topImage2.src = artworks[checkValue(count)];
+                    }
+                };
+                
+                function previousArt() {
+                    //flips the visible layer counterclockwise
+                    if (degreeCount2 % 360 == 0 || degreeCount2 == 0) {
+                        topDiv1.style.transformStyle = "preserve-3d";
+                        topDiv1.style.transition = "transform 1s";
+                        topDiv1.style.zIndex = "2";
+
+                        topDiv2.style.transformStyle = "flat";
+                        topDiv2.style.transition = "0s";
+                        topDiv2.style.zIndex = "1";
+                    } else if (degreeCount1 % 360 == 0 || degreeCount1 == 0) {
+                        topDiv1.style.transformStyle = "flat";
+                        topDiv1.style.transition = "0s";
+                        topDiv1.style.zIndex = "1";
+
+                        topDiv2.style.transformStyle = "preserve-3d";
+                        topDiv2.style.transition = "transform 1s";
+                        topDiv2.style.zIndex = "2";
+                    }
+                    //decreases the degrees by 108
+                    decrementDegrees();
+                    topDiv1.style.transform = "rotateX(" + degreeCount1 + "deg)";
+                    topDiv2.style.transform = "rotateX(" + degreeCount2 + "deg)";
+                    //decrements the count by 1 and checks for out-of-bound errors
+                    count--;
+                    checkReset();
+                    //changes the image source of the "hidden" layer 
+                    if (topDiv2.style.transformStyle == "flat") {
+                        topImage1.src = artworks[checkValue(count)];
+                    } else if (topDiv1.style.transformStyle == "flat") {
+                        topImage2.src = artworks[checkValue(count)];
+                    }
+                    /*the bottom image is stationary. 
+                    it changes to the previous image to make the animation more seamless*/
+                    bottomImage.src = artworks[checkValue(count + 1)];
+                };
+                function incrementDegrees() {
+                    degreeCount1 += 180;
+                    degreeCount2 += 180;
+                };
+                function decrementDegrees() {
+                    degreeCount1 -= 180;
+                    degreeCount2 -=180;
+                };
+                function checkValue(number) {
+                    if (number > maxIndex) {
+                        return 0;
+                    } else if (number < 0) {
+                        return maxIndex;
+                    }
+                    return number;
+                };
+                function checkReset() {
+                    if (count > maxIndex) {
+                        count = 0;
+                    } else if (count < 0) {
+                        count = maxIndex;
+                    }
+                }
+
+            </script>
+        </body>
+    </head>
+</html>

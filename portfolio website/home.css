@@ -1,0 +1,120 @@
+/*color palette
+dark green (black forest): #143109
+dull green (dry sage): #AAAE7F
+dull light green (beige??): #D0D6B3
+white (bright snow): #F7F7F7
+off white (platinum): #EFEFEF - use as bg to avoid conflicting colors
+*/
+/*sectioning tags*/ 
+body {
+    background-color: #efede6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    margin: 0%;
+}
+a {
+    font-family: 'Elms Sans';
+    text-decoration: none;
+    color: #143109;
+}
+nav {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+ul {
+    text-align: center;
+    padding: 2%;
+    flex: 1;
+    background-color: gainsboro;
+    margin: 0%;
+}
+li {
+    display: inline;
+}
+div p {
+    flex: 1;
+}
+div img {
+    flex: 1;
+}
+div a {
+    flex: 1;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*text*/
+p {
+    font-size: 120%;
+    font-family: 'Elms Sans';
+    margin: 1%;
+}
+h1 {
+    font-family: 'Limelight';
+    font-size: 250%;
+    color: #45363B;
+    margin: 1%;
+}
+h2 {
+    font-family: 'Limelight';
+    font-size: 200%;
+    color: #143109;
+    margin-bottom: 0%;
+    margin-top: 2%;
+}
+/*fonts*/
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*images*/
+img {
+    height: 30%;
+    width: 30%;
+    flex: 1;
+    margin: 2%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    /* height: auto; */
+    /* float: center; */
+    background-color: #143109cf;
+    /* overflow: auto; */
+}
+.model-content {
+    margin: auto;
+    overflow: auto;
+}
+/*buttons*/
+button {
+    font-family: 'Elms Sans';
+    border-width: 0em;
+    background-color: #AAAE7F;
+    padding: 1em;
+}
+button:hover {
+    cursor: pointer;
+}
+/*home page specific*/
+.circle {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 60%;
+    text-align: center;
+    opacity: 50%;
+}  
+#current-icon {
+    width: 90%;
+    opacity: 100%;
+}
