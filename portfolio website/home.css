@@ -23,16 +23,22 @@ nav {
     flex-direction: row;
     display: flex;
     width: 100%;
+    background-color: gainsboro;
 }
 ul {
     text-align: center;
     padding: 2%;
     flex: 1;
-    background-color: gainsboro;
     margin: 0%;
+}
+li:hover {
+    background-color: #AAAE7F;
 }
 li {
     display: inline;
+    padding: 20px;
+    transition-duration: 0.5s;
+    border-radius: 3em;
 }
 div p {
     flex: 1;
