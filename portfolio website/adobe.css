@@ -86,8 +86,14 @@ body {
 .square {
     width: auto;
     height: 55%;
+    align-items: center;
 }
-
+.square img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+}
 /*modal classes*/
 .modal {
     height: 84vh;
