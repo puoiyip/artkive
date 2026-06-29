@@ -68,6 +68,7 @@
                 height: 100%;
                 justify-content: center;
                 align-content: center;
+                align-items: center;
                 display: flex;
                 opacity: 0;
                 transition-duration: 0.5s;
@@ -77,7 +78,21 @@
             .modal img {
                 height: 90%;
                 width: auto;
+                max-width: 70vw;
                 object-fit: contain;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .modal button {
+                margin: 5%;
+                width: 3em;
+                height: 3em;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-content: center;
+                font-weight: bold;
+                z-index: 2;
             }
         </style>
         <!--Faculty Glyphic
@@ -119,45 +134,46 @@
             <div id="overview">
                 <div class="row">
                     <img src="portfolio images/colorpop.png" alt="Four red pandas colored in orange and purple, green, orange, and brown" onclick="openModal(this)">
-                    <img src="portfolio images/doodlebomb.png" alt="Image of grentperez with a gray and orange gradient background, clementines, and decorations on his blazer">
-                    <img src="portfolio images/fake_media.png" alt="Photo-edited image of a group of protesters in Chinatown with signs that advocate against the construction of an arena">
-                    <img src="portfolio images/fantastical_beast.png" alt="Photo-edited image of a rhino-ferret-seal hybrid on a stone in a river">
+                    <img src="portfolio images/doodlebomb.png" alt="Image of grentperez with a gray and orange gradient background, clementines, and decorations on his blazer" onclick="openModal(this)">
+                    <img src="portfolio images/fake_media.png" alt="Photo-edited image of a group of protesters in Chinatown with signs that advocate against the construction of an arena" onclick="openModal(this)">
+                    <img src="portfolio images/fantastical_beast.png" alt="Photo-edited image of a rhino-ferret-seal hybrid on a stone in a river" onclick="openModal(this)">
                 </div>
                 <div class="row">
-                    <img src="portfolio images/filtered_money1.png" alt="Fictional dollar bill of Link (from the Legend of Zelda) and the Hyrule logo">
-                    <img src="portfolio images/filtered_money2.png" alt="Fictional dollar bill featuring the Master Sword and a korok leaf (Legend of Zelda)">
-                    <img src="portfolio images/great_gatsby_cover.png" alt="A mansion located next to a lake with a broken clock behind it. The book is titled The Great Gatsby">
-                    <img src="portfolio images/laufey_self_portrait.png" alt="Illustration of Laufey surrounded by white flowers">
+                    <img src="portfolio images/filtered_money1.png" alt="Fictional dollar bill of Link (from the Legend of Zelda) and the Hyrule logo" onclick="openModal(this)">
+                    <img src="portfolio images/filtered_money2.png" alt="Fictional dollar bill featuring the Master Sword and a korok leaf (Legend of Zelda)" onclick="openModal(this)">
+                    <img src="portfolio images/great_gatsby_cover.png" alt="A mansion located next to a lake with a broken clock behind it. The book is titled The Great Gatsby" onclick="openModal(this)">
+                    <img src="portfolio images/laufey_self_portrait.png" alt="Illustration of Laufey surrounded by white flowers" onclick="openModal(this)">
                 </div>
                 <div class="row">
-                    <img src="portfolio images/logo.png" alt="Coffee cup logo with the name Cozy Corner Brews">
-                    <img src="portfolio images/pixel_project.png" alt="Tan pixelated inventory interface featuring a character, skills, main items, and backpack items">
-                    <img src="portfolio images/product_design.png" alt="Brown Chocoluxe chocolate bar container featuring cinnamon sticks. The other side contains nutrition facts">
-                    <img src="portfolio images/promotional_poster.png" alt="Poster featuring Link (from the Legend of Zelda: Tears of the Kingdom) alongside silhouettes of Rauru, Zelda, and the warriors">
+                    <img src="portfolio images/logo.png" alt="Coffee cup logo with the name Cozy Corner Brews" onclick="openModal(this)">
+                    <img src="portfolio images/pixel_project.png" alt="Tan pixelated inventory interface featuring a character, skills, main items, and backpack items" onclick="openModal(this)">
+                    <img src="portfolio images/product_design.png" alt="Brown Chocoluxe chocolate bar container featuring cinnamon sticks. The other side contains nutrition facts" onclick="openModal(this)">
+                    <img src="portfolio images/promotional_poster.png" alt="Poster featuring Link (from the Legend of Zelda: Tears of the Kingdom) alongside silhouettes of Rauru, Zelda, and the warriors" onclick="openModal(this)">
                 </div>
                 <div class="row">
-                    <img src="portfolio images/RECOVER_animation.gif" alt="Walking animation of Round 3 Ivan from Alien Stage">
-                    <img src="portfolio images/talking_animation.gif" alt="Talking animation of the reversible octopus toy in a cloak with a magical staff">
-                    <img src="portfolio images/chongyun_mountain.PNG" alt="Chongyun (from Genshin Impact) on top of a mountain, looking back">
-                    <img src="portfolio images/chongyun_train.JPEG" alt="Chongyun (from Genshin Impact) sleeping next to a window on a train with a sunset in the background">
+                    <img src="portfolio images/RECOVER_animation.gif" alt="Walking animation of Round 3 Ivan from Alien Stage" onclick="openModal(this)">
+                    <img src="portfolio images/talking_animation.gif" alt="Talking animation of the reversible octopus toy in a cloak with a magical staff" onclick="openModal(this)">
+                    <img src="portfolio images/chongyun_mountain.PNG" alt="Chongyun (from Genshin Impact) on top of a mountain, looking back" onclick="openModal(this)">
+                    <img src="portfolio images/chongyun_train.JPEG" alt="Chongyun (from Genshin Impact) sleeping next to a window on a train with a sunset in the background" onclick="openModal(this)">
                 </div>
                 <div class="row">
-                    <img src="portfolio images/kazuha.jpeg" alt="Kazuha (from Genshin Impact) reaching out to an Electro seelie">
-                    <img src="portfolio images/kenma_kozume.png" alt="Kenma (from Haikyuu) sitting on a gymnasium seat with his eyes closed and face tucked into his jacket">
-                    <img src="portfolio images/mysta_900k.jpg" alt="Mysta (from Nijisanji) laying down on a bed with the Mystake mascot next to him">
-                    <img src="portfolio images/till.PNG" alt="Till (from Alien Stage) sitting down under a red-leaf tree petting a black cat">
+                    <img src="portfolio images/kazuha.jpeg" alt="Kazuha (from Genshin Impact) reaching out to an Electro seelie" onclick="openModal(this)">
+                    <img src="portfolio images/kenma_kozume.png" alt="Kenma (from Haikyuu) sitting on a gymnasium seat with his eyes closed and face tucked into his jacket" onclick="openModal(this)">
+                    <img src="portfolio images/mysta_900k.jpg" alt="Mysta (from Nijisanji) laying down on a bed with the Mystake mascot next to him" onclick="openModal(this)">
+                    <img src="portfolio images/till.PNG" alt="Till (from Alien Stage) sitting down under a red-leaf tree petting a black cat" onclick="openModal(this)">
                 </div>
                 <div class="row">
-                    <img src="portfolio images/tomo.jpeg" alt="Portrait of Tomo (fan-name for a character from Genshin Impact)">
-                    <img src="portfolio images/ver_vermillion.JPG" alt="Ver (from Nijisanji) slouched over a desk with his forehead resting on the back of his hands with the caption XSOLEIL'S KAICHOU :D">
-                    <img src="portfolio images/xingyun_lny.PNG" alt="Xingqiu and Chongyun (from Genshin Impact) leaning on a railway in Liyue next to each other with lanterns in the background">
-                    <img src="portfolio images/xingyun_tbhk.PNG" alt="Xingqiu and Chongyun (from Genshin Impact) sitting down next to each other on the grass with a sunset in the background">
+                    <img src="portfolio images/tomo.jpeg" alt="Portrait of Tomo (fan-name for a character from Genshin Impact)" onclick="openModal(this)">
+                    <img src="portfolio images/ver_vermillion.JPG" alt="Ver (from Nijisanji) slouched over a desk with his forehead resting on the back of his hands with the caption XSOLEIL'S KAICHOU :D" onclick="openModal(this)">
+                    <img src="portfolio images/xingyun_lny.PNG" alt="Xingqiu and Chongyun (from Genshin Impact) leaning on a railway in Liyue next to each other with lanterns in the background" onclick="openModal(this)">
+                    <img src="portfolio images/xingyun_tbhk.PNG" alt="Xingqiu and Chongyun (from Genshin Impact) sitting down next to each other on the grass with a sunset in the background" onclick="openModal(this)">
                 </div>
             </div>
             <div class="modal">
                 <button onclick="previousModal()"><</button>
                 <img src="">
                 <button onclick="nextModal()">></button>
+                <span id="close" onclick="closeModal()">&times;</span>
             </div>
             <script>
                 //icon images
