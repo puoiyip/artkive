@@ -55,6 +55,18 @@ div a {
     justify-content: center;
     align-items: center;
 }
+/*NAVBAR*/
+.circle {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 60%;
+    text-align: center;
+    opacity: 50%;
+}  
+#current-icon {
+    width: 90%;
+    opacity: 100%;
+}
 /*text*/
 p {
     font-size: 120%;
@@ -71,6 +83,9 @@ h2 {
     font-family: 'Limelight';
     font-size: 200%;
     color: #143109;
+}
+h3 {
+    font-weight: 400;
 }
 /*fonts*/
 .limelight-regular {
