@@ -1,5 +1,5 @@
-var works = document.getElementsByClassName("row");
-var modal = document.getElementsByClassName("modal");
+const works = document.getElementsByClassName("row");
+const modal = document.getElementsByClassName("modal");
 let count = 0;
 let toggleCount = 0;
 //set modal equal to width of editor interface

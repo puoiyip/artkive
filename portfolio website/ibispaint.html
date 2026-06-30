@@ -110,7 +110,7 @@
             </div>
             
             <script>
-                var artworks = [
+                const artworks = [
                     "portfolio images/chongyun_mountain.PNG",
                     "portfolio images/chongyun_train.JPEG",
                     "portfolio images/kazuha.jpeg",
@@ -122,12 +122,12 @@
                     "portfolio images/xingyun_lny.PNG",
                     "portfolio images/xingyun_tbhk.PNG"
                 ];
-                var topDiv1 = document.getElementById("book-pages-top");
-                var topDiv2 = document.getElementById("book-pages-hidden");
-                var topImage1 = document.getElementById("top-image");
-                var topImage2 = document.getElementById("hidden-image");
-                var bottomImage = document.getElementById("bottom-image");
-                var maxIndex = artworks.length - 1;
+                const topDiv1 = document.getElementById("book-pages-top");
+                const topDiv2 = document.getElementById("book-pages-hidden");
+                const topImage1 = document.getElementById("top-image");
+                const topImage2 = document.getElementById("hidden-image");
+                const bottomImage = document.getElementById("bottom-image");
+                const maxIndex = artworks.length - 1;
                 let count = 0;
                 let degreeCount1 = 0;
                 let degreeCount2 = 180;

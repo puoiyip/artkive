@@ -206,26 +206,26 @@
                 let currentName = document.getElementsByTagName("h3")[1];
                 let rightName = document.getElementsByTagName("h3")[2];
                 //buttons
-                var leftButton = document.getElementById("left-button");
-                var rightButton = document.getElementById("right-button");
+                const leftButton = document.getElementById("left-button");
+                const rightButton = document.getElementById("right-button");
                 //count
                 let count = 0;
                 let rowCount = 0;
                 let imageCount = 0
-                //NAVIGATION VARIABLES
-                var icons = [
+                //NAVIGATION constIABLES
+                const icons = [
                     "portfolio images/doodlebomb.png",
                     "portfolio images/colorpop.png",
                     "portfolio images/fake_media.png",
                     "portfolio images/fantastical_beast.png"
                 ];
-                var htmlLinks = [
+                const htmlLinks = [
                     "ibispaint.html",
                     "photoshop.html",
                     "illustrator.html",
                     "videos.html"
                 ];
-                var pageNames = [
+                const pageNames = [
                     "ibisPaint X",
                     "Photoshop",
                     "Illustrator",
@@ -263,7 +263,7 @@
                 };
                 function checkCount(value) {
                     //greatest index that doesnt cause an index out of bounds error
-                    var maxIndex = icons.length - 1;
+                    const maxIndex = icons.length - 1;
                     //if the value is negative, set it to the max
                     if (value < 0) {
                         console.log(maxIndex);
@@ -276,10 +276,10 @@
                     console.log(value);
                     return value;
                 };
-                //MODAL VARIABLES
-                var rowArray = document.getElementsByClassName("row");
-                var modal = document.getElementsByClassName("modal")[0];
-                var modalImage = modal.getElementsByTagName("img")[0];
+                //MODAL constIABLES
+                const rowArray = document.getElementsByClassName("row");
+                const modal = document.getElementsByClassName("modal")[0];
+                const modalImage = modal.getElementsByTagName("img")[0];
                 //returns the source of the image at a specific row and image number
                 function getImageSource() {
                     let imageArray = rowArray[rowCount].getElementsByTagName("img");
@@ -295,7 +295,7 @@
                     //shows the modal
                     modal.style.opacity = "1";
                     modal.style.zIndex = "2";
-                    /*set the rowCount and imageCount variables to match the selected image
+                    /*set the rowCount and imageCount constiables to match the selected image
                     (ensures that the nextModal() and previousModal() functions work as intended)
                     
                     for each image element in the given row, check if the source is equal to the argument.
