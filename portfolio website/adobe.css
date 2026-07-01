@@ -97,7 +97,7 @@ body {
 /*modal classes*/
 .modal {
     height: 84vh;
-    width: 73%;
+    width: 71%;
     transition-duration: 0.5s;
     transition-property: all;
     display: block;
