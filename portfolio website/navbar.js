@@ -14,7 +14,7 @@ let rightName = document.getElementsByTagName("h3")[2];
 const leftButton = document.getElementById("left-button");
 const rightButton = document.getElementById("right-button");
 //count
-let count = 0;
+let navCount = 0;
 let rowCount = 0;
 let imageCount = 0
 //NAVIGATION constIABLES
@@ -38,33 +38,33 @@ const pageNames = [
 ];
 //NAVIGATION FUNCTIONS
 function leftButtonClick() {
-    count--;
+    navCount--;
     changeIcons();
 };
 function rightButtonClick() {
-    count++;
+    navCount++;
     changeIcons();
 };
 function changeIcons() {
-    if (count >= icons.length) {
-        count = 0;
-    } else if (count < 0) {
-        count = icons.length - 1;
+    if (navCount >= icons.length) {
+        navCount = 0;
+    } else if (navCount < 0) {
+        navCount = icons.length - 1;
     }
-    console.log("count: " + count);
+    console.log("navCount: " + navCount);
     console.log("length: " + icons.length);
     //rotate the icon images
-    currentIcon.src = icons[checkCount(count)];
-    leftIcon.src = icons[checkCount(count - 1)];
-    rightIcon.src = icons[checkCount(count + 1)];
+    currentIcon.src = icons[checkCount(navCount)];
+    leftIcon.src = icons[checkCount(navCount - 1)];
+    rightIcon.src = icons[checkCount(navCount + 1)];
     //rotate the links 
-    currentLink.href = htmlLinks[checkCount(count)];
-    leftLink.href = htmlLinks[checkCount(count - 1)];
-    rightLink.href = htmlLinks[checkCount(count + 1)];
+    currentLink.href = htmlLinks[checkCount(navCount)];
+    leftLink.href = htmlLinks[checkCount(navCount - 1)];
+    rightLink.href = htmlLinks[checkCount(navCount + 1)];
     //rotate the text
-    currentName.innerHTML = pageNames[checkCount(count)];
-    leftName.innerHTML = pageNames[checkCount(count - 1)];
-    rightName.innerHTML = pageNames[checkCount(count + 1)];
+    currentName.innerHTML = pageNames[checkCount(navCount)];
+    leftName.innerHTML = pageNames[checkCount(navCount - 1)];
+    rightName.innerHTML = pageNames[checkCount(navCount + 1)];
 };
 function checkCount(value) {
     //greatest index that doesnt cause an index out of bounds error
