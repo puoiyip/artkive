@@ -64,7 +64,24 @@
 
         <title>ibisPaint X</title>
 
-        <body class="fade-in">
+        <body class="fade-in" onload="changeIcons()">
+            <div style="display: flex; align-items: center; width: 75%">
+                <button id="left-button" class="nav-button" onclick="leftButtonClick()"><</button>
+                <a href="" style="text-align: center" id="left-link">
+                    <h3></h3>
+                    <img src="" class="circle" id="left-icon">
+                </a>
+                <a href="" style="text-align: center;" id="current-link">
+                    <h3></h3>
+                    <img src="" class="circle" id="current-icon">
+                </a>
+                <a href="" style="text-align: center" id="right-link">
+                    <h3></h3>
+                    <img src="" class="circle" id="right-icon">
+                </a>
+                <button id="right-button" class="nav-button" onclick="rightButtonClick()">></button>
+            </div>
+
             <nav>
                 <ul>
                     <li>
@@ -232,6 +249,7 @@
                 }
 
             </script>
+            <script src="navbar.js"></script>
         </body>
     </head>
 </html>
