@@ -54,19 +54,19 @@ function changeIcons() {
     console.log("navCount: " + navCount);
     console.log("length: " + icons.length);
     //rotate the icon images
-    currentIcon.src = icons[checkCount(navCount)];
-    leftIcon.src = icons[checkCount(navCount - 1)];
-    rightIcon.src = icons[checkCount(navCount + 1)];
+    currentIcon.src = icons[checkNavCount(navCount)];
+    leftIcon.src = icons[checkNavCount(navCount - 1)];
+    rightIcon.src = icons[checkNavCount(navCount + 1)];
     //rotate the links 
-    currentLink.href = htmlLinks[checkCount(navCount)];
-    leftLink.href = htmlLinks[checkCount(navCount - 1)];
-    rightLink.href = htmlLinks[checkCount(navCount + 1)];
+    currentLink.href = htmlLinks[checkNavCount(navCount)];
+    leftLink.href = htmlLinks[checkNavCount(navCount - 1)];
+    rightLink.href = htmlLinks[checkNavCount(navCount + 1)];
     //rotate the text
-    currentName.innerHTML = pageNames[checkCount(navCount)];
-    leftName.innerHTML = pageNames[checkCount(navCount - 1)];
-    rightName.innerHTML = pageNames[checkCount(navCount + 1)];
+    currentName.innerHTML = pageNames[checkNavCount(navCount)];
+    leftName.innerHTML = pageNames[checkNavCount(navCount - 1)];
+    rightName.innerHTML = pageNames[checkNavCount(navCount + 1)];
 };
-function checkCount(value) {
+function checkNavCount(value) {
     //greatest index that doesnt cause an index out of bounds error
     const maxIndex = icons.length - 1;
     //if the value is negative, set it to the max
