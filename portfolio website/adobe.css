@@ -56,6 +56,7 @@ body {
     width: 100%; 
     height: 100%; 
     background-color: #efede6;
+    margin:0;
 }
 /*sidebar classes*/
 .adobe-sidebar {
@@ -96,12 +97,15 @@ body {
 }
 /*modal classes*/
 .modal {
-    height: 84vh;
-    width: 71%;
+    position: absolute;
+    bottom: 0vh;
+    height: 73vh;
+    width: 70vw;
     transition-duration: 0.5s;
     transition-property: all;
     display: block;
     opacity: 0;
+    margin: 0;
 }
 .modal p {
     margin: 3%;
