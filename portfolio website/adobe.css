@@ -113,3 +113,6 @@ body {
     color: white;
     font-size: 100%;
 }
+body * {
+    z-index: 1;
+}
