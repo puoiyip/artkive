@@ -19,9 +19,9 @@ let rowCount = 0;
 let imageCount = 0
 //NAVIGATION constIABLES
 const icons = [
-    "portfolio images/doodlebomb.png",
+    "portfolio images/kenma_kozume.png",
     "portfolio images/colorpop.png",
-    "portfolio images/fake_media.png",
+    "portfolio images/laufey_self_portrait.png",
     "portfolio images/fantastical_beast.png"
 ];
 const htmlLinks = [
