@@ -81,3 +81,7 @@ function checkNavCount(value) {
     console.log(value);
     return value;
 };
+function autoScroll() {
+    const content = document.getElementById("main-content");
+    content.click();
+}

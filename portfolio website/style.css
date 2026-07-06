@@ -6,6 +6,9 @@ white (bright snow): #F7F7F7
 off white (platinum): #EFEFEF - use as bg to avoid conflicting colors
 */
 /*sectioning tags*/ 
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #efede6;
     display: flex;
