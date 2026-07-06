@@ -68,13 +68,13 @@ div a {
     width: 90%;
     opacity: 100%;
 }
-.nav-button {
+.nav-button, #left-button, #right-button {
     border-radius: 1em;
     font-size: 150%;
     font-weight: bold;
     color: #45363B;
     font-family: "Limelight";
-    width: 5vw
+    width: 5vw;
 }
 button {
     border-bottom-left-radius: 1em;
