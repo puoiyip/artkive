@@ -13,6 +13,9 @@ body {
     justify-content: center;
     flex-direction: column; 
     margin: 0%;
+    background-image: url("portfolio\ images/scrapbook_bg.png");
+    background-size: 100%;
+    background-attachment: fixed;
 }
 a {
     font-family: 'Elms Sans';
