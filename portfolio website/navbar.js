@@ -16,8 +16,10 @@ const rightButton = document.getElementById("right-button");
 //count
 let navCount = 0;
 let rowCount = 0;
-let imageCount = 0
-//NAVIGATION constIABLES
+let imageCount = 0;
+//gets the current page url
+let currentURL = window.location.href;
+//navigation variables
 const icons = [
     "portfolio images/kenma_kozume.png",
     "portfolio images/colorpop.png",
@@ -36,7 +38,7 @@ const pageNames = [
     "Illustrator",
     "Videos"
 ];
-//NAVIGATION FUNCTIONS
+//navigation functions
 function leftButtonClick() {
     navCount--;
     changeIcons();
@@ -66,6 +68,14 @@ function changeIcons() {
     leftName.innerHTML = pageNames[checkNavCount(navCount - 1)];
     rightName.innerHTML = pageNames[checkNavCount(navCount + 1)];
 };
+function loadIcons() { //sets the center image to match the current url (to be used on load)
+    for (let i = 0; i < htmlLinks.length; i++) {
+        if (currentURL.indexOf(htmlLinks[i]) != -1) {
+            navCount = i;
+        }
+    };
+    changeIcons();
+};
 function checkNavCount(value) {
     //greatest index that doesnt cause an index out of bounds error
     const maxIndex = icons.length - 1;
@@ -84,4 +94,4 @@ function checkNavCount(value) {
 function autoScroll() {
     const content = document.getElementById("main-content");
     content.click();
-}
+};
