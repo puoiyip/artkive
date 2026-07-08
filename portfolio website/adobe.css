@@ -18,12 +18,10 @@ div img {
 .adobe-interface {
     flex-direction: row; 
     display: flex;
-    border-style: solid;
-    border-width: 0em;
-    border-color: #efede6;
     width: 98vw;
     height: 83vh;
     margin-left: 0;
+    background-color: #efede6;
 }
 .adobe-header {
     text-align: left; 
