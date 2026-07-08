@@ -188,3 +188,21 @@ button:hover {
         opacity: 1;
     }
 }
+/*home icon*/
+#home-icon {
+    background-image: url("portfolio\ images/home_icon_brown.png");
+    background-size: 100%;
+    transition: 0.5s;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    width: 5vh;
+    height: 5vh;
+}
+#home-icon:hover {
+    background-image: url("portfolio\ images/home_icon_green.png");
+    cursor: pointer;
+}
+a:has(#home-icon) {
+    z-index: 5;
+}
