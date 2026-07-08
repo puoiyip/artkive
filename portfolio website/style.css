@@ -195,7 +195,7 @@ button:hover {
     transition: 0.5s;
     position: fixed;
     top: 10%;
-    left: 5%;
+    right: 5%;
     width: 5vh;
     height: 5vh;
 }
