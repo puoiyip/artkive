@@ -24,7 +24,7 @@ const icons = [
     "portfolio images/kenma_kozume.png",
     "portfolio images/colorpop.png",
     "portfolio images/laufey_self_portrait.png",
-    "portfolio images/fantastical_beast.png"
+    "portfolio images/gwc_vlog_ss.png"
 ];
 const htmlLinks = [
     "ibispaint.html",
