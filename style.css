@@ -206,3 +206,18 @@ button:hover {
 a:has(#home-icon) {
     z-index: 5;
 }
+/*formats the page based on the screen size*/
+@media screen and (orientation: portrait) {
+    /*text*/
+    h1{
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    p {
+        font-size: 18px;
+    }
+    /*menu button*/
+    
+}
