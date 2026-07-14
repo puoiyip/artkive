@@ -215,12 +215,39 @@ a:has(#home-icon) {
     h2 {
         font-size: 26px;
     }
-    h3 {
-        font-size: 20px;
+    h3 { /*hides the text for the navbar*/
+        display: none;
     }
     p {
         font-size: 16px;
     }
     /*menu button*/
-    
+    /*hide navbar*/
+    .circle {
+        display: none;
+    }  
+    .nav-button, #left-button, #right-button {
+        border-radius: 1em;
+        font-size: 150%;
+        font-weight: bold;
+        color: #45363B;
+        font-family: "Limelight";
+        width: 5vw;
+    }
+    button {
+        display: none;
+    }
+    .modal button { /*ensures that the modal buttons stay the same*/
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        width: 30%;
+        font-weight: bold;
+        z-index: 1;
+    }
+}
+/*adds elements if the screen width is wide*/
+@media (min-width: 800px) {
+
 }
