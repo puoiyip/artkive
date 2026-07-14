@@ -207,7 +207,7 @@ a:has(#home-icon) {
     z-index: 5;
 }
 /*formats the page based on the screen size*/
-@media screen and (orientation: portrait) {
+@media (max-width: 800px) {
     /*text*/
     h1{
         font-size: 30px;
