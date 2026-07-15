@@ -275,4 +275,8 @@ a:has(#home-icon) {
     #left-button, #right-button {
         display: none;
     }
+    /*hide adobe navbar*/
+    nav {
+        display: none;
+    }
 }
