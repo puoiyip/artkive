@@ -222,16 +222,39 @@ a:has(#home-icon) {
         font-size: 16px;
     }
     /*menu button*/
-    #menu-icon {
-        display: block;
+    #menu {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         top: 10%;
-        left: 5%;
+        left: 5%;    
+        z-index: 5;
+    }
+    #menu-icon {
         width: 5vh; 
         height: 5vh;
     }
     #menu-icon:hover {
         cursor: pointer;
+    }
+    #menu-links {
+        display: none;
+        flex-direction: column;
+        transition: 0.5s;
+    }
+    #menu-links a {
+        padding: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        background-color: #efede6;
+    }
+    #menu-links a:hover {
+        background-color: #AAAE7F;
+        transition: 0.5s;
+    }
+    #menu:hover #menu-links {
+        display: flex;
+        transition: 0.5s;
     }
     /*hide home button*/
     #home-icon {
