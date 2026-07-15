@@ -272,17 +272,8 @@ a:has(#home-icon) {
         font-family: "Limelight";
         width: 5vw;
     }
-    button {
+    #left-button, #right-button {
         display: none;
-    }
-    .modal button { /*ensures that the modal buttons stay the same*/
-        border-bottom-left-radius: 1em;
-        border-bottom-right-radius: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
-        width: 30%;
-        font-weight: bold;
-        z-index: 1;
     }
 }
 /*adds elements if the screen width is wide*/
