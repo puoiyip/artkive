@@ -222,6 +222,17 @@ a:has(#home-icon) {
         font-size: 16px;
     }
     /*menu button*/
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 5vh; 
+        height: 5vh;
+    }
+    #menu-icon:hover {
+        cursor: pointer;
+    }
     /*hide home button*/
     #home-icon {
         display: none;
