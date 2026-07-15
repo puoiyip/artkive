@@ -206,6 +206,10 @@ button:hover {
 a:has(#home-icon) {
     z-index: 5;
 }
+/*hides menu*/
+#menu {
+    display: none;
+}
 /*formats the page based on the screen size*/
 @media (max-width: 800px) {
     /*text*/
