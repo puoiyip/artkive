@@ -276,7 +276,3 @@ a:has(#home-icon) {
         display: none;
     }
 }
-/*adds elements if the screen width is wide*/
-@media (min-width: 800px) {
-
-}
