@@ -122,4 +122,7 @@ body * {
     .row img {
         width: 80%;
     }
+    .modal { /*vertical scroll bar*/
+        overflow-y: auto;
+    }
 }
