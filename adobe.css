@@ -118,3 +118,8 @@ body {
 body * {
     z-index: 1;
 }
+@media (max-width: 800px) {
+    .row img {
+        width: 80%;
+    }
+}
