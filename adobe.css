@@ -101,8 +101,8 @@ body {
 .modal {
     position: absolute;
     bottom: 0vh;
-    height: 73vh;
-    width: 70vw;
+    height: 100%;
+    width: 100%;
     transition-duration: 0.5s;
     transition-property: all;
     display: block;
