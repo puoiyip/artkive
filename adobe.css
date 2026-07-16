@@ -125,4 +125,7 @@ body * {
     .modal { /*vertical scroll bar*/
         overflow-y: auto;
     }
+    .adobe-sidebar button {
+        width: 80%;
+    }
 }
