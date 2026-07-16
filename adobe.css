@@ -102,7 +102,7 @@ body {
     position: absolute;
     bottom: 0vh;
     height: 100%;
-    width: 100%;
+    width: 70vw;
     transition-duration: 0.5s;
     transition-property: all;
     display: block;
