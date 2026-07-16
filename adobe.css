@@ -108,6 +108,7 @@ body {
     display: block;
     opacity: 0;
     margin: 0;
+    overflow-y: auto;
 }
 .modal p {
     margin: 3%;
@@ -121,9 +122,6 @@ body * {
 @media (max-width: 800px) {
     .row img {
         width: 80%;
-    }
-    .modal { /*vertical scroll bar*/
-        overflow-y: auto;
     }
     .adobe-sidebar button {
         width: 80%;
