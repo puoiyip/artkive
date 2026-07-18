@@ -283,4 +283,8 @@ a:has(#home-icon) {
     nav {
         display: none;
     }
+    /*hide polaroids*/
+    .polaroid {
+        display: none;
+    }
 }
