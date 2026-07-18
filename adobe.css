@@ -120,6 +120,9 @@ body * {
     z-index: 1;
 }
 @media (max-width: 1200px) {
+    .row {
+        width: 100%;
+    }
     .row img {
         width: 80%;
     }
