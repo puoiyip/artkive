@@ -129,4 +129,7 @@ body * {
     .adobe-sidebar button {
         width: 80%;
     }
+    .adobe-icons {
+        display: none;
+    }
 }
