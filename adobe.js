@@ -9,7 +9,6 @@ for (let i = 0; i < modal.length; i++) {
     console.log(i);
 };
 //functions
-//used for the home page... need to make this an external file
 function setCount(number) {
     count = number;
     changeWork();
